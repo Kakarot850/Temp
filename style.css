@@ -72,13 +72,12 @@ body {
 }
 
 .box {
-    background-color: red;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition:  0.3s ease ;
+    transition: transform 0.3s ease ;
 }
 
 .box:hover{
@@ -117,6 +116,7 @@ body {
     font-family: "SussanScript";
     font-size: 1.1em;
     color: white;
+    animation: forBox3 1s ease forwards;
 }
 
 .box-4 {
@@ -167,6 +167,18 @@ body {
     100% {
         opacity: 1;
         transform: translatey(0);
+    }
+}
+
+@keyframes forBox3 {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
