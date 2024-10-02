@@ -55,7 +55,6 @@ body {
 }
 
 .upper-layer {
-    overflow: hidden;
     height: 180px;
     display: flex;
     flex-direction: row;
@@ -65,7 +64,6 @@ body {
 }
 
 .lower-layer {
-    overflow: hidden;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -80,13 +78,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition:  0.3s ease ;
 }
+
+.box:hover{
+    transform: scale(1.05) !important;
+}
+
 
 .box-1 {
     background-color: #f32d55;
     border-top-left-radius: 10px;
     color: white;
     font-size: 25px;
+    animation: forBox1 1s ease forwards;
+    opacity: 0;
 }
 
 .middle {
@@ -103,12 +109,13 @@ body {
     font-weight: 550;
     width: 100%;
     height: 150px;
+    animation: forBox2 1s ease forwards;
 }
 
 .box-3 {
     background-color: #23191e;
     font-family: "SussanScript";
-    font-size: 21px;
+    font-size: 1.1em;
     color: white;
 }
 
@@ -116,21 +123,73 @@ body {
     background-color: #b9b4fe;
     border-top-right-radius: 10px;
     font-size: 25px;
+    animation: forBox4 1s ease forwards;
 }
 .box-5 {
     background-color: #8ef693;
     font-family: "OtistaFont";
     border-bottom-left-radius: 10px;
     width: 150%;
+    animation: forBox5_6 1s ease forwards;
 }
 .box-6 {
     background-color: #fae1d7;
     font-family: "CoveredByYourGrace";
     font-weight: bold;
     border-bottom-right-radius: 10px;
+    animation: forBox5_6 1s ease forwards;
+    transition:  0.3s ease ;
 }
 
 .box-6 span {
     font-size: 11px;
     font-weight: bold;
+}
+
+@keyframes forBox1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes forBox2 {
+    0% {
+        opacity: 0;
+        transform: translatey(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+@keyframes forBox4 {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes forBox5_6 {
+    0% {
+        opacity: 0;
+        transform: translatey(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatey(0);
+    }
 }
